@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+         #box, #box1, #box2 {
+            height: 100px;
+            width: 300px;
+            background-color: brown;
+            position: absolute;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #box1 {
+            top: 120px;
+            background-color: lightblue;
+        }
+
+        #box2 {
+            top: 240px;
+            background-color: green;
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h3>animation for position</h3>
+    <button id="btn">start animation</button>
+    <div id="box"> box <button id="slide"> swipe</button></div>
+    <div id="box1">box1 <button id="slide2"> swipe 2 </button></div>
+    <div id="box2">box2</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(() =>{
+                $("#box").animate({
+                    left: '10%'
+                })
+            })
+
+              $("#slide").click(() => {
+                $("#box").animate({
+                    left: '100%'
+                })
+                $("#box1").animate({
+                    left: '40%'
+                })
+            })
+
+              $("#slide2").click(() => {
+                $("#box1").animate({
+                    left: '100%'
+                })
+                $("#box2").animate({
+                    left: '40%'
+                })
+            })
+        })
+    </script>
+</body>
+</html>

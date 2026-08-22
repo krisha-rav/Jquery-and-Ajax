@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>hide or show using hover</h3>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis quo totam aliquam dignissimos architecto deleniti praesentium est, nam delectus distinctio.</p>
+    <button id="hide">click to hide</button>
+    <button id="show">click to show</button>
+
+    <script>
+        $(document).ready(() => {
+    $("#hide").hover(() => {
+        $("#para").hide()
+    })
+    $("#show").hover(() => {
+        $("#para").show()
+    })
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!-- fadeIn: hidden
+FadeOut: visible 
+FadeToggle : Toggles between fadeIn and fadeOut
+FadeTo: You can also control transparency with  
+-->
+
+<!-- 3000 microsecond = 3 sec -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+          #para {
+            height: 200px;
+            width: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+     <h2> Fade in and out (opacity (0 to 1)) </h2>
+    <button id="hide"> click to hide </button>
+    <button id="show"> click to show </button>
+    <button id="toggle"> click to toggle </button>
+    <button id="toggleTo"> toggle to </button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eaque, exercitationem similique magni ea consequuntur. Vel porro totam ipsam dolores?</p>
+
+    <script>
+         $(document).ready(() => {
+            $("#show").click(() => {
+                $("#para").fadeIn(3000)
+            })
+            $("#hide").click(() => {
+                $("#para").fadeOut(3000)
+            })
+            $("#toggle").click(() => {
+                $("#para").fadeToggle()
+            })
+        })
+        $("#toggleTo").click(() => {
+                $("#para").fadeTo(3000, 0.3)
+            })
+    </script>
+</body>
+</html>

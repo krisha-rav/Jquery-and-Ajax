@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>slide</title>
+    <style>
+        #para {
+            height: 200px;
+            width: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> Slide up and down</h2>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos iusto ipsa optio, nesciunt suscipit voluptatum veritatis excepturi obcaecati nostrum minima.</p>
+    <button id="up"> click to up </button>
+    <button id="down"> click to down </button>
+    <button id="toggle"> click to toggle </button>
+    <script>
+       $(document).ready(() => {
+        $("#up").click(() => {
+            $("#para").slideUp()
+        })
+        $("#down").click(() => {
+            $("#para").slideDown()
+        })
+
+        $("#toggle").click(() => {
+            $("#para").slideToggle()
+        })
+       })
+    </script>
+</body>
+
+</html>

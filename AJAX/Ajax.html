@@ -1,0 +1,36 @@
+<!-- AJAX = Asynchronized Javascript and XML
+  does not let the page refresh (loads data w/o refreshing the page) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> AJAX Example </h2>
+    <button onclick="loadData()"> Load Data </button>
+    <p id="output"></p>
+
+    <script>
+        function loadData() {
+            let hello = new XMLHttpRequest();
+            hello.onload = function (){
+                if(hello.status = 200) {
+                    document.getElementById("output").innerHTML = hello.responseText;
+                } else {
+                    document.getElementById("output").innerHTML = "error data is not loading"
+                }
+            }
+
+            hello.open("GET", "data.txt", true);
+            hello.send();
+        }
+    </script>
+</body>
+</html>
+
+<!-- any type of file can be used in this there is no limitation -->
+ <!-- use port if doesn't run -->

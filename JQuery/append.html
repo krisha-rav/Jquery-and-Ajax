@@ -1,0 +1,41 @@
+<!-- Note: 
+    append: add content at the end of the content
+prepend: add content at the beginning of the content -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+          #para {
+            height: 200px;
+            width: 200px;
+            background-color: gray;
+        } 
+    </style>
+</head>
+<body>
+    <h3>Append</h3>
+    <ul><li>List 1</li></ul>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatem quia aspernatur, non accusamus dolore. Tempore dolores sit ratione animi.</p>
+    <button id="append">click to append</button>
+    <button id="prepend">click to prepend</button>
+
+    <script>
+         $(document).ready(() => {
+        $("#append").click(() => {
+            $("#para").append('<h3> Hello world </h3>')
+        })
+       })
+
+       $(document).ready(() => {
+        $("#prepend").click(() => {
+            $("#para").prepend('<h3> Hello world </h3>')
+        })
+       })
+    </script>
+</body>
+</html>

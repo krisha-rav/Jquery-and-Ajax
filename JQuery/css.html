@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #para{
+            height: 200px;
+            width: 200px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h2>click hover</h2>
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt repellat perferendis repudiandae modi doloribus recusandae hic tempore, possimus in, reprehenderit aliquid. Eveniet autem nemo aliquid accusamus sit itaque, odio incidunt tenetur aspernatur praesentium natus</p>
+    <button id="hide">click to apply css</button>
+    <button id="show">click to show</button>
+    <button id="toggle">click to toggle</button>
+
+    <script>
+        // $(document).ready(()=> {
+        //     $("#show").click(() => {
+        //         $("#para").css("color","blue")
+        //     })
+        // })
+
+        //  $(document).ready(()=> {
+        //     $("#hide").click(() => {
+        //         $("#para").css("color","blue")
+        //     })
+        // })
+
+         $(document).ready(()=> {
+            $("#toggle").click(() => {
+                $("#para").css("color","blue")
+            })
+        })
+    </script>
+</body>
+</html>
